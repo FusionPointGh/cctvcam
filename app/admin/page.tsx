@@ -5,7 +5,7 @@ import { Sprout, ShoppingCart, BadgeCheck, Wallet, Download } from "lucide-react
 import { auth } from "@/lib/auth"
 import { getAdminUser } from "@/lib/admin"
 import { getPurchaseStats, getPurchases, getRevenueByDay } from "@/app/actions/admin"
-import { formatNaira } from "@/lib/product"
+import { formatCedi } from "@/lib/product"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { RevenueChart } from "@/components/admin/revenue-chart"
@@ -48,7 +48,7 @@ export default async function AdminPage() {
   const cards = [
     { label: "Total orders", value: String(stats.totalOrders), icon: ShoppingCart },
     { label: "Paid orders", value: String(stats.paidOrders), icon: BadgeCheck },
-    { label: "Revenue", value: formatNaira(stats.revenue), icon: Wallet },
+    { label: "Revenue", value: formatCedi(stats.revenue), icon: Wallet },
     { label: "Downloads", value: String(stats.downloads), icon: Download },
   ]
 

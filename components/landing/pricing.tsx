@@ -1,6 +1,6 @@
 import { Check } from "lucide-react"
 import { CheckoutDialog } from "@/components/checkout-dialog"
-import { formatNaira, PRODUCT } from "@/lib/product"
+import { formatCedi, PRODUCT } from "@/lib/product"
 
 const included = [
   "The complete soybean budgeting spreadsheet",
@@ -12,7 +12,7 @@ const included = [
 ]
 
 export function Pricing() {
-  const price = formatNaira(PRODUCT.priceKobo)
+  const price = formatCedi(PRODUCT.priceKobo)
   return (
     <section id="pricing" className="border-t border-border bg-card/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">

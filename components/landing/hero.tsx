@@ -1,10 +1,10 @@
 import Image from "next/image"
 import { CheckCircle2, Download, FileSpreadsheet } from "lucide-react"
 import { CheckoutDialog } from "@/components/checkout-dialog"
-import { formatNaira, PRODUCT } from "@/lib/product"
+import { formatCedi, PRODUCT } from "@/lib/product"
 
 export function Hero() {
-  const price = formatNaira(PRODUCT.priceKobo)
+  const price = formatCedi(PRODUCT.priceKobo)
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
@@ -52,8 +52,8 @@ export function Hero() {
             />
           </div>
           <div className="absolute -bottom-5 -left-5 hidden rounded-lg border border-border bg-card p-4 shadow-xl sm:block">
-            <p className="text-xs text-muted-foreground">Projected net profit / ha</p>
-            <p className="font-serif text-2xl font-semibold text-primary">₦612,500</p>
+            <p className="text-xs text-muted-foreground">Projected net profit / acre</p>
+            <p className="font-serif text-2xl font-semibold text-primary">GHS 2,350</p>
           </div>
         </div>
       </div>

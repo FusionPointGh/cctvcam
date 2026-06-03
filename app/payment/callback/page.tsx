@@ -4,7 +4,7 @@ import { CheckCircle2, XCircle, Download, ArrowLeft } from "lucide-react"
 import { db } from "@/lib/db"
 import { purchase } from "@/lib/db/schema"
 import { verifyTransaction } from "@/lib/paystack"
-import { PRODUCT, formatNaira } from "@/lib/product"
+import { PRODUCT, formatCedi } from "@/lib/product"
 import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
 
@@ -103,7 +103,7 @@ export default async function PaymentCallbackPage({
             </>
           )}
           <p className="mt-6 text-xs text-muted-foreground">
-            Order total: {formatNaira(PRODUCT.priceKobo)}
+            Order total: {formatCedi(PRODUCT.priceKobo)}
           </p>
         </div>
       </main>
