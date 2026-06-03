@@ -7,7 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
-import { formatNaira } from "@/lib/product"
+import { formatCedi } from "@/lib/product"
 
 type Purchase = {
   id: number
@@ -61,7 +61,7 @@ export function OrdersTable({ purchases }: { purchases: Purchase[] }) {
                 <StatusBadge status={p.status} />
               </TableCell>
               <TableCell className="text-right tabular-nums">
-                {formatNaira(p.amount)}
+                {formatCedi(p.amount)}
               </TableCell>
               <TableCell className="text-right tabular-nums">{p.downloadCount}</TableCell>
               <TableCell className="text-right text-muted-foreground">
